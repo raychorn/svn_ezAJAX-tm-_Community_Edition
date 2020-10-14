@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Towers of Hanoi</title>
+</head>
+
+<body>
+<p align="justify"><strong>Towers</strong><strong> of Hanoi</strong><strong> </strong><br>
+  The Towers   of Hanoi puzzle was invented by  the French mathematician Edouard Lucas in 1883. We  are given a tower of eight disks (initially four in the applet below),  initially stacked in increasing size on one of three pegs. The objective is to  transfer the entire tower to one of the other pegs (the rightmost one in the  applet below), moving only one disk at a time and never a larger one onto a  smaller. The puzzle is well known to students of Computer Science since  it appears in virtually any introductory text on data structures or algorithms.  Its solution touches on two important topics discussed later on:</p>
+<ul type="disc">
+  <li>recursive functions and       stacks </li>
+  <li>recurrence relations </li>
+</ul>
+<p>The applet has several controls that allow one to select  the number of disks and observe the solution in a Fast or Slow manner. To solve  the puzzle drag disks from one peg to another following the rules. You can drop  a disk on to a peg when its center is sufficiently close to the center of the  peg. The applet expects you to move disks from the leftmost peg to the  rightmost peg.<br>
+<br>
+    <strong>Recursive  solution</strong><br>
+  Let call the three pegs Src  (Source), Aux (Auxiliary) and Dst  (Destination). To better understand and appreciate the following  solution you should try solving the puzzle for small number of disks, say, 2,3,  and, perhaps, 4. However one solves the problem, sooner or later the bottom  disks will have to be moved from Src to Dst. At this point in time all the  remaining disks will have to be stacked in decreasing size order on Aux. After  moving the bottom disk from Src to Dst these disks will have to be  moved from Aux to Dst. Therefore, for a given number  N of disks, the problem appears to be solved if we know how to accomplish the  following tasks:</p>
+<ol start="1" type="1">
+  <li>Move the top N-1 disks       from Src to Aux (using Dst       as an intermediary peg) </li>
+  <li>Move the bottom disks       from Src to Dst </li>
+  <li>Move N-1 disks from Aux       to Dst (using Src as       an intermediary peg) </li>
+</ol>
+<p>Assume there is a function Solve with four arguments -  number of disks and three pegs (source, intermediary and destination - in this  order). Then the body of the function might look like</p>
+<p><strong><em>Solve(N, Src, Aux, Dst)</em><br>
+  <em>&nbsp;&nbsp;&nbsp; if N is 0 exit</em><br>
+  <em>&nbsp;&nbsp;&nbsp; Solve(N-1, Src, Dst, Aux)</em><br>
+  <em>&nbsp;&nbsp;&nbsp; Move from Src to Dst</em><br>
+  <em>&nbsp;&nbsp;&nbsp; Solve(N-1, Aux, Src, Dst)</em></strong><br>
+    <br>
+This actually serves as the definition of the function  Solve. The function is recursive in that it calls itself repeatedly with  decreasing values of N until a terminating condition (in our case N=0) has been  met. To me the sheer simplicity of the solution is breathtaking. For N=3 it  translates into</p>
+<ol start="1" type="1">
+  <li>Move from Src to Dst </li>
+  <li>Move from Src to Aux </li>
+  <li>Move from Dst to Aux </li>
+  <li>Move from Src to Dst </li>
+  <li>Move from Aux to Src </li>
+  <li>Move from Aux to Dst </li>
+  <li>Move from Src to Dst </li>
+</ol>
+<p>Of course &quot;Move&quot; means moving the topmost disk.  For N=4 we get the following sequence</p>
+<ol start="1" type="1">
+  <li>Move from Src to Aux </li>
+  <li>Move from Src to Dst </li>
+  <li>Move from Aux to Dst </li>
+  <li>Move from Src to Aux </li>
+  <li>Move from Dst to Src </li>
+  <li>Move from Dst to Aux </li>
+  <li>Move from Src to Aux </li>
+  <li>Move from Src to Dst </li>
+  <li>Move from Aux to Dst </li>
+  <li>Move from Aux to Src </li>
+  <li>Move from Dst to Src </li>
+  <li>Move from Aux to Dst </li>
+  <li>Move from Src to Aux </li>
+  <li>Move from Src to Dst </li>
+  <li>Move from Aux to Dst </li>
+</ol>
+<p align="left"><br>
+    <strong>Recurrence  relations</strong><br>
+  Let TN be the minimum number of moves needed to  solve the puzzle with N disks. From the previous section T3=7 and T4=15.  One can easily convince oneself that T2=3 and T1=1. A  trained mathematician would also note that T0=0. Now let us try to  derive a general formula.<br>
+The recursive solution above involves moving twice (N-1)  disks from one peg to another and making one additional move in between. It  then follows that</p>
+<table border="0" cellpadding="0">
+  <tr>
+    <td width="80"><p>&nbsp;</p></td>
+    <td><p>TN<img src="../../../../../../Documents and Settings/Ray Horn/Application Data/Macromedia/Dreamweaver 8/OfficeImageTemp/image002.gif" alt="2" width="14" height="13">TN-1+1+TN-1    = 2TN-1+1 </p></td>
+  </tr>
+</table>
+<p>The inequality suggests that it might be possible to move N  disks with fewer than 2TN-1+1 moves. Which is actually not the case. Indeed, when the time comes  to move the bottom disk (N-1) disks will have been moved from Src to Aux in at least TN-1 moves. Since we are  trying to use as few steps as possible, we may assume that that portion of the  task took exactly TN-1 moves. It takes just one move to move the  biggest disk from Src to Dst. One then needs exactly TN-1 more  steps to finish the task. Therefore the minimum number of moves needed to solve  the puzzle with N disks equals TN-1 + 1 + TN-1 = 2TN-1  + 1 moves. <br>
+  In other words,</p>
+<table border="0" cellpadding="0">
+  <tr>
+    <td width="80"><p>&nbsp;</p></td>
+    <td><p>TN = 2TN-1    + 1 </p></td>
+  </tr>
+</table>
+<p>Thus we can define the quantity TN as</p>
+<table border="0" cellpadding="0">
+  <tr>
+    <td width="80"><p>&nbsp;</p></td>
+    <td><p>T0 = 0<br>
+      TN = 2TN-1 + 1 for N&gt;0 </p></td>
+  </tr>
+</table>
+<p>Thus we may compute T1 = 2T0 + 1 = 1,  T2 = 2T1 + 1= 3, T3 = 2T2 + 1 = 7  and so on sequentially.<br>
+  The above expression is known as a recurrence relation which, as you might have noticed, is but a  recursive function. TN is defined in terms of only one of its  preceding values. Other recurrence relations may be more complicated, for  example, f(N) = 2f(N-1) + 3f(N-2). Recurrence  relations appear under various guises in numerous branches of Mathematics and  applications. <br>
+  Returning to the definition of TN, define SN  = TN + 1. Then S0 = 1 and SN = TN +  1 = (2TN-1 + 1) + 1 = 2TN-1 + 2 = 2(TN-1 + 1)  = 2SN-1. Which is to say that SN could  be defined as</p>
+<table border="0" cellpadding="0">
+  <tr>
+    <td width="80"><p>&nbsp;</p></td>
+    <td><p>S0 = 1<br>
+      SN = 2SN-1 for N&gt;0 </p></td>
+  </tr>
+</table>
+<p>The latter is solved easily in the closed (non-recurrent)  form SN=2N. Wherefrom</p>
+<table border="0" cellpadding="0">
+  <tr>
+    <td width="80"><p>&nbsp;</p></td>
+    <td><p>TN = 2N-1    for N<img src="../../../../../../Documents and Settings/Ray Horn/Application Data/Macromedia/Dreamweaver 8/OfficeImageTemp/image003.gif" alt="3" width="15" height="14">0. </p></td>
+  </tr>
+</table>
+</body>
+</html>

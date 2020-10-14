@@ -1,0 +1,384 @@
+/* StyleSheet.css */
+BODY {
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+	/*background-color: #0080FF;*/
+	/*background-image: url(/app/images/ezAJAX%20Logo%2008-17-2006a%20(800x800xt).gif);*/
+	color: black;
+	font-family: Trebuchet MS, verdana, arial, sans-serif; 
+	font-size: xx-small;
+}
+
+.reassignCategoriesClass {
+	font-size: xx-small;
+	color: black;
+	overflow: auto;
+	border: thin solid black;
+	height: 302px;
+	width: 300px;
+	max-height: 300px;
+}
+
+.installProcessSelectedClass {
+	border: thin solid black;
+	background-color: cyan;
+	cursor:hand; cursor:pointer;
+}
+
+.installProcessUnSelectedClass {
+	border: thin solid silver;
+	background-color: white;
+	cursor:hand; cursor:pointer;
+}
+
+.installProcessHoverSelectedClass {
+	border: thin solid silver;
+	background-color: silver;
+	color: black;
+	cursor:hand; cursor:pointer;
+}
+
+.scrollableDivClass {
+	overflow: auto;
+	max-height: 300px;
+}
+
+.forgotPasswordButtonClassFF {
+	font-size: xx-small;
+	font-weight: bold;
+	text-align: left;
+	color: black;
+	width: 120px;
+}
+
+.loginButtonClassFF {
+	font-size: xx-small;
+	font-weight: bold;
+	text-align: left;
+	color: black;
+	width: 45px;
+}
+
+.premiumButtonClassFF {
+	font-size: xx-small;
+	font-weight: bold;
+	text-align: left;
+	color: black;
+	width: 120px;
+}
+
+.registerButtonClassFF {
+	font-size: xx-small;
+	font-weight: bold;
+	text-align: left;
+	color: black;
+	width: 65px;
+}
+
+.registerButtonClass3FF {
+	font-size: xx-small;
+	font-weight: bold;
+	text-align: left;
+	color: black;
+	width: 88px;
+}
+
+.buttonClass {
+	font-size: xx-small;
+	font-weight: bold;
+}
+
+.buttonClassFF {
+	font-size: xx-small;
+	font-weight: bold;
+}
+
+.buttonMenuClass {
+	font-size: xx-small;
+	font-weight: bold;
+}
+
+.buttonMenuClassFF {
+	font-size: xx-small;
+	text-align: left;
+}
+
+.buttonAdminClass {
+	font-size: xx-small;
+	font-weight: bold;
+	background: Lime;
+}
+
+.buttonAdminFunctionClass {
+	font-size: xx-small;
+	width: 60px;
+	background: Lime;
+}
+
+.buttonAdminFunctionClassFF {
+	font-size: xx-small;
+	width: 60px;
+	background: Lime;
+}
+
+.buttonDirectoryClass {
+	font-size: xx-small;
+	width: 350px;
+	text-align: left;
+}
+
+.buttonDirectoryClassFF {
+	font-size: xx-small;
+	width: 350px;
+	text-align: left;
+}
+
+.buttonArchivesClass {
+	font-size: xx-small;
+	width: 300px;
+	text-align: left;
+}
+
+.buttonArchivesClassFF {
+	font-size: xx-small;
+	width: 300px;
+	text-align: left;
+}
+
+.boldPromptTextClass {
+	font-size: xx-small;
+	font-weight: bold;
+}
+
+.errorStatusClass {
+	font-size: xx-small;
+	color: red;
+}
+
+.errorStatusBoldClass {
+	font-size: xx-small;
+	color: red;
+	font-weight: bold;
+}
+
+.errorBigStatusBoldClass {
+	font-size: medium;
+	color: red;
+	font-weight: bold;
+}
+
+.onholdStatusClass {
+	font-size: xx-small;
+	color: green;
+}
+
+.onholdStatusBoldClass {
+	font-size: xx-small;
+	color: green;
+	font-weight: bold;
+}
+
+.onholdStatusSmallBoldClass {
+	font-size: xx-small;
+	color: green;
+	font-weight: bold;
+}
+
+.currentCategoryBoldClass {
+	font-size: small;
+	color: green;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.normalStatusClass {
+	font-size: xx-small;
+	color: blue;
+}
+
+.adminAddEntryClass {
+	font-size: small;
+	color: blue;
+}
+
+.smallRadioButton {
+	WIDTH: 1.5em; HEIGHT: 1.5em
+}
+
+.normalSmallStatusBoldClass {
+	font-size: xx-small;
+	color: blue;
+	font-weight: bold;
+}
+
+.normalStatusBoldClass {
+	font-size: xx-small;
+	color: blue;
+	font-weight: bold;
+}
+
+.normalx11StatusBoldClass {
+	font-size: xx-small;
+	color: blue;
+	font-weight: bold;
+}
+
+.menux11StatusBoldClass {
+	font-size: xx-small;
+	color: white;
+	font-weight: bold;
+}
+
+.normalx11TextClass {
+	font-size: xx-small;
+	color: black;
+}
+
+.normalSiteContentTextClass {
+	font-size: xx-small;
+	color: black;
+}
+
+.normalDetailedContentTextClass {
+	font-size: xx-small;
+	color: black;
+}
+
+.normalx9TextClass {
+	font-size: xx-small;
+	color: black;
+}
+
+.normalx12StatusBoldClass {
+	font-size: xx-small;
+	color: blue;
+	font-weight: bold;
+}
+
+.titlex12BoldClass {
+	font-size: xx-small;
+	color: black;
+	font-weight: bold;
+}
+
+.titlex14BoldClass {
+	font-size: medium;
+	color: black;
+	font-weight: bold;
+}
+
+.titlex12GreenBoldClass {
+	font-size: small;
+	color: green;
+	font-weight: bold;
+}
+
+.titlex12BlueBoldClass {
+	font-size: xx-small;
+	color: blue;
+	font-weight: bold;
+}
+
+.titlex12BlackBoldClass {
+	font-size: xx-small;
+	color: black;
+	font-weight: bold;
+}
+
+.normalBigStatusBoldClass {
+	font-size: medium;
+	color: blue;
+	font-weight: bold;
+}
+
+.textClass {
+	font-size: xx-small;
+}
+
+.textSmallClass {
+	font-size: xx-small;
+}
+
+.textBoldClass {
+	font-size: xx-small;
+	font-weight: bold;
+}
+
+.textEntryClass {
+	font-size: xx-small;
+}
+
+.switchcontent {
+	background: #E3E6E8;
+}
+
+.workingStatusClass {
+	font-size: xx-small;
+	color: black;
+	font-weight: bold;
+}
+
+.paperBgColorClass {
+	background-color : #FFFACD;
+}
+
+.paperBgErrorColorClass {
+	background-color : #FF8080;
+}
+
+.code {
+	font-family: courier;
+	font-size: xx-small;
+	color: black;
+	border: solid thin #0000cc;
+	background-color: #ffffcc;
+	overflow: auto;
+	max-height: 200px;
+}
+
+.codePrint {
+	font-family: courier;
+	font-size: xx-small;
+	color: black;
+	border: solid thin #0000cc;
+	background-color: #ffffcc;
+}
+
+.codeSmall {
+	font-family: courier;
+	font-size: xx-small;
+	color: black;
+	border: solid thin #0000cc;
+	background-color: #ffffcc;
+	overflow: auto;
+	max-height: 200px;
+}
+
+.codeSmaller {
+	font-family: courier;
+	font-size: xx-small;
+	color: black;
+	border: solid thin #0000cc;
+	background-color: #ffffcc;
+	overflow: auto;
+	max-height: 200px;
+}
+
+.codeSmallerFF {
+	font-family: courier;
+	font-size: xx-small;
+	color: black;
+	border: solid thin #0000cc;
+	background-color: #ffffcc;
+	overflow: auto;
+}
+
+.codeSmallerNoBorder {
+	font-family: courier;
+	font-size: xx-small;
+	color: black;
+	background-color: #ffffcc;
+	overflow: auto;
+	max-height: 200px;
+}

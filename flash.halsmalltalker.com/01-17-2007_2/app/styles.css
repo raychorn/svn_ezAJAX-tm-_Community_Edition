@@ -1,0 +1,16 @@
+P {
+	FONT-SIZE: 12px; FONT-FAMILY: "Arial"
+}
+
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+
+#centerwrapper {
+	MARGIN-LEFT: auto; WIDTH: 760px; MARGIN-RIGHT: auto; TEXT-ALIGN: left
+}
+
+.headerTextClass {
+	color: yellow;
+}
+

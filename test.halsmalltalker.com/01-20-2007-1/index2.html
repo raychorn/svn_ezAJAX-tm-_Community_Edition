@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<title>Divs instead of Tables</title>
+<style type="text/css">BODY {
+		background: #eeffee;
+		font: 12px/1.2 verdana;
+	}
+
+	.ContentWrapper {
+		width: 800px;
+		border: 1px solid silver;
+	}
+	
+	.ContentHeader {
+		float: top;
+		width: 100%;
+		background: silver;
+	}
+
+	.columnOne {
+		float: left;
+		width: 33%;
+		height: 250px;
+		margin: 2px 2px 2px 2px;
+		border: 1px solid red;
+	}
+
+	.columnTwo {
+		float: left;
+		width: 33%;
+		height: 250px;
+		margin: 2px 2px 2px 2px;
+		border: 1px solid green;
+	}
+
+	.columnThree {
+		float: left;
+		width: *;
+		height: 250px;
+		margin: 2px 2px 2px 2px;
+		border: 1px solid blue;
+	}
+	
+	.ColumnBottom {
+		margin-top: 300px;
+		border: 1px solid lime;
+	}
+
+	.ColumnBottom3 {
+		margin-top: 100%;
+		border: 1px solid lime;
+	}
+
+	.columnOne1 {
+		float: left;
+		width: 33%;
+		height: 500px;
+		margin: 2px 2px 2px 2px;
+		border: 1px solid red;
+	}
+
+	.columnTwo1 {
+		float: left;
+		width: 33%;
+		height: 500px;
+		margin: 2px 2px 2px 2px;
+		border: 1px solid green;
+	}
+
+	.columnThree1 {
+		float: left;
+		width: *;
+		height: 500px;
+		margin: 2px 2px 2px 2px;
+		border: 1px solid blue;
+	}
+</style>
+</head>
+
+<body>
+
+<div class="ContentWrapper">
+	<div class="ContentHeader">
+		The original content.
+	</div>
+	<div class="columnOne">
+		Content column one, we place some content in this area. And now we place more content in this area.<br><br>
+		And now we introduce some content that may not align with the other columns, the goal here is to make all three columns appear to be symetrical.
+	</div>
+	<div class="columnTwo">
+		Content column two, we place some content in this area. And now we place more content in this area.<br><br>
+		In this column we place a list of items.<br><br>
+		<ul>
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+			<li>five</li>
+			<li>six</li>
+			<li>seven</li>
+			<li>eight</li>
+			<li>nine</li>
+			<li>ten</li>
+		</ul>
+	</div>
+	<div class="columnThree">
+		Content column three, we place some content in this area. And now we place more content in this area.<br><br>
+		The content in this second paragraph needs to be aligned at the bottom of this area.
+	</div>
+</div>
+
+<div class="ContentWrapper">
+	<div class="ContentHeader">
+		Attempt #1.
+	</div>
+	<div class="columnOne1">
+		Content column one, we place some content in this area. And now we place more content in this area.<br><br>
+		And now we introduce some content that may not align with the other columns, the goal here is to make all three columns appear to be symetrical.<br><br>
+		First we need the border on this column to be the same height as the other columns.<br><br>
+		<div class="ColumnBottom">
+			We make the height of all the columns the same.
+		</div>
+	</div>
+	<div class="columnTwo1">
+		Content column two, we place some content in this area. And now we place more content in this area.<br><br>
+		Column 2 is the column that has the most content and is taller than the other columns.<br><br>
+		In this column we place a list of items.<br><br>
+		<ul>
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+			<li>five</li>
+			<li>six</li>
+			<li>seven</li>
+			<li>eight</li>
+			<li>nine</li>
+			<li>ten</li>
+		</ul>
+		In this column we place a second list of items.<br><br>
+		<ul>
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+			<li>five</li>
+			<li>six</li>
+			<li>seven</li>
+			<li>eight</li>
+			<li>nine</li>
+			<li>ten</li>
+		</ul>
+	</div>
+	<div class="columnThree1">
+		Content column three, we place some content in this area. And now we place more content in this area.<br><br>
+		The content in this second paragraph needs to be aligned at the bottom of this area.<br><br>
+		As you can see the lime colored box does appear at the bottom of Colum #1 however this technique suffers from some weaknesses.<br><br>
+		First, the amount of content in the form of the number of lines affects the position of the lime colored box.<br><br>
+		Second, the amount of content that appears above the lime colored box affects the position of the lime colored box.
+	</div>
+</div>
+
+<div class="ContentWrapper">
+	<div class="ContentHeader">
+		Attempt #2.
+	</div>
+	<div class="columnOne1">
+		Content column one, we place some content in this area. And now we place more content in this area.<br><br>
+		And now we introduce some content that may not align with the other columns, the goal here is to make all three columns appear to be symetrical.<br><br>
+		First we need the border on this column to be the same height as the other columns.<br><br>
+		<div class="ColumnBottom">
+			We make the height of all the columns the same. With the text within the lime box appearing at the bottom of Column #1.
+		</div>
+	</div>
+	<div class="columnTwo1">
+		Content column two, we place some content in this area. And now we place more content in this area.<br><br>
+		Column 2 is the column that has the most content and is taller than the other columns.<br><br>
+		In this column we place a list of items.<br><br>
+		<ul>
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+			<li>five</li>
+			<li>six</li>
+			<li>seven</li>
+			<li>eight</li>
+			<li>nine</li>
+			<li>ten</li>
+		</ul>
+		In this column we place a second list of items.<br><br>
+		<ul>
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+			<li>five</li>
+			<li>six</li>
+			<li>seven</li>
+			<li>eight</li>
+			<li>nine</li>
+			<li>ten</li>
+		</ul>
+	</div>
+	<div class="columnThree1">
+		Content column three, we place some content in this area. And now we place more content in this area.<br><br>
+		The content in this second paragraph needs to be aligned at the bottom of this area.<br><br>
+		As you can see in Attempt #2 the lime colored box now appears to be in the wrong place simply because we have added some text to the content that falls within the lime colored box.
+	</div>
+</div>
+
+<div class="ContentWrapper" style="margin-top: 50px;">
+	<div class="ContentHeader">
+		Attempt #3. <small><i>(Notice the extra space that appears between the top of Attempt #3 and the bottom of Attempt #2; this was created by using a specific style that overrides the Class for the ContentWrapper Div Class.)</i></small>
+	</div>
+	<div class="columnOne1">
+		Content column one, we place some content in this area. And now we place more content in this area.<br><br>
+		And now we introduce some content that may not align with the other columns, the goal here is to make all three columns appear to be symetrical.<br><br>
+		First we need the border on this column to be the same height as the other columns.<br><br>
+		<div class="ColumnBottom3">
+			We make the height of all the columns the same. With the text within the lime box appearing at the bottom of Column #1.
+		</div>
+	</div>
+	<div class="columnTwo1">
+		Content column two, we place some content in this area. And now we place more content in this area.<br><br>
+		Column 2 is the column that has the most content and is taller than the other columns.<br><br>
+		In this column we place a list of items.<br><br>
+		<ul>
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+			<li>five</li>
+			<li>six</li>
+			<li>seven</li>
+			<li>eight</li>
+			<li>nine</li>
+			<li>ten</li>
+		</ul>
+		In this column we place a second list of items.<br><br>
+		<ul>
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+			<li>five</li>
+			<li>six</li>
+			<li>seven</li>
+			<li>eight</li>
+			<li>nine</li>
+			<li>ten</li>
+		</ul>
+	</div>
+	<div class="columnThree1">
+		Content column three, we place some content in this area. And now we place more content in this area.<br><br>
+		The content in this second paragraph needs to be aligned at the bottom of this area.<br><br>
+		As you can see in Attempt #3 the lime colored box now appears to be closer to the bottom of Column #1 however it is not entirely at the bottom of Column #1.  Of course in practical application one might be satisfied with Attempt #3 so long as the end result were aesthetically pleasing when viewed with the rest of the content that might appear on any particular web page.
+	</div>
+</div>
+
+</body>
+</html>
+

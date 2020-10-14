@@ -1,0 +1,1 @@
+<cflocation url="/php/links/#ReplaceNoCase(ListLast(CGI.SCRIPT_NAME, "/"), ".cfm", ".php")#">

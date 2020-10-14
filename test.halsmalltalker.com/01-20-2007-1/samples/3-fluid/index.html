@@ -1,0 +1,107 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head><title>glish.com : CSS layout techniques : 3 columns, all fluid</title>
+
+<style type="text/css">
+	@import "all.css"; /* just some basic formatting, no layout stuff */
+	
+	body {
+		margin:10px 10px 0px 10px;
+		padding:0px;
+		}
+	
+	#mainright {
+		width:33%;
+		float:left;
+		background:#fff;
+		padding-bottom:10px;
+		}
+	
+	#maincenter {
+		width:34%;
+		float:left;
+		background:#fff;
+		padding-bottom:10px;
+		}
+	
+	#mainleft {
+		width:33%;
+		float:left;
+		background:#fff;
+		padding-bottom:10px;
+		}
+	
+	#banner {
+		background:#fff;
+		}
+		
+	p,h1,pre {
+		margin:0px 10px 10px 10px;
+		}
+		
+	h1 {
+		font-size:14px;
+		padding-top:10px;
+		}
+	
+	#mainright p { font-size:10px}
+	#banner h1 { margin:0px; padding:10px}
+	
+</style>
+</head><body>
+<div id="banner"><h1><a href="home.asp">LAYOUT TECHNIQUES</a>: 3 columns, all fluid</h1></div>
+
+<div id="mainleft">
+	<h1>mainleft</h1>
+<pre>#mainleft {
+width:33%;
+float:left;
+background:#fff;
+padding-bottom:10px;
+	}</pre>
+	<p class="greek">
+	Marketing teams input produce cross purposing in view of goal alignments due to knowlege paucity, necessitating workflow education and orientation. Media sourcing as an acquistion strategy is counterproductive in a internet environment in virtual component methodology. Imaging through ideals rather than real world branding, is a perilous undertaking with negative results. Branding strategies generating motion as activity without reproducible results is a ultimately futile effort if left in place.
+	</p>
+</div>
+
+<div id="maincenter">
+	<h1>maincenter</h1>
+<pre>#maincenter {
+width:34%;
+float:left;
+background:#fff;
+padding-bottom:10px;
+	}</pre>
+	<p>A much simpler and potentially more useful technique that then <a class="sitelinksredorange layout" href="8.asp">4 column technique</a> using float:left instead of position:absloute. It suffers from needing percentage widths for each column, and from potential column wrapping when the browser window is narrowed.</p>
+	<p><strong>Scroll down for the source.</strong></p>
+	<p class="greek">Enterprise engenderment accelerates initiative platforms, reducing staffing components, integration of technical accessibility, resulting in bottom line pluralisms, benefit-wise. Incidental re-sizing staff requirements through attrition can be accelerated by paridigm shifts and focusing on core suitability and cross-training. </p>
+</div>
+
+<div id="mainright">
+	<h1>mainright</h1>
+<pre>#mainright {
+width:33%;
+float:left;
+background:#fff;
+padding-bottom:10px;
+	}</pre>
+		<p>
+	This page is part of <a href="home.asp">CSS Layout Techniques</a>, a resource for web developers and designers.
+	</p>
+	<p>
+	Other Layout Techniques:<br/>
+		<a href="7.asp">3 columns, the holy grail</a><br/>
+	<a href="9.asp">2 columns, ALA style</a><br/>
+	<a href="8.asp">4 columns, all fluid</a><br/>
+	<a href="2.asp">3 columns, all fluid </a><br/>
+	<a href="3.asp">static width and centered</a><br/>
+	<a href="1.asp">nested float</a><br/>
+	</p>
+	<p>
+	Does it <a href="http://validator.w3.org/check?uri=http://glish.com/css/2.asp?noSRC=true">validate</a>?
+	</p>
+	
+</div>
+
+</body>
+</html>

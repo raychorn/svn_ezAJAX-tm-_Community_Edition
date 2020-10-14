@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head><title>glish.com : CSS layout techniques : static width and centered</title>
+
+<style type="text/css">
+	@import "all.css"; /* just some basic formatting, no layout stuff */
+	
+	body {
+		text-align:center;
+		}
+	
+	#frame {
+		width:650px;
+		margin-right:auto;
+		margin-left:auto;
+		margin-top:10px;
+		padding:0px;
+		text-align:left;
+		}
+		
+	#contentleft {
+		width:175px;
+		padding:0px;
+		float:left;
+		background:#fff;
+		}
+	
+	#contentcenter {
+		width:300px;
+		padding:0px;
+		float:left;
+		background:#eee;
+		}
+	
+	#contentright {
+		width:175px;
+		padding:0px;
+		float:left;
+		background:#fff;
+		}
+	
+	#contentheader {
+		background:#fff
+		}
+		
+	p,h1,pre {
+		margin:0px 10px 10px 10px;
+		}
+		
+	h1 {
+		font-size:14px;
+		padding-top:10px;
+		}
+		
+	#contentheader h1 {
+		font-size:14px;
+		padding:10px;
+		margin:0px;
+		}
+	
+	#contentright p { font-size:10px}
+	
+</style>
+</head><body>
+<div id="frame">
+	<div id="contentheader"><h1><a href="home.asp">LAYOUT TECHNIQUES</a>: static width and centered</h1></div>
+	<div id="contentleft">
+		<h1>contentleft</h1>
+<pre>#contentleft {
+width:175px;
+padding:0px;
+float:left;
+background:#fff;
+	}</pre>
+		<p class="greek">Marketing teams input produce cross purposing in view of goal alignments due to knowlege paucity, necessitating workflow education and orientation. </p>
+	</div>
+
+	<div id="contentcenter">
+		<h1>contentcenter</h1>
+<pre>#contentcenter {
+width:300px;
+padding:0px;
+float:left;
+background:#eee;
+	}</pre>
+		<p>3 columns all with static widths, and contained in a parent DIV wihich remains centered in the window. One rather serious limitation of this particular technique is that if any of the three content DIVs contains an image or a really long word that is longer than the width of the DIV, it totally breaks the layout. Each browser breaks it differently.</p>
+		<p><strong>Scroll down for the source.</strong></p>
+		<p class="greek">Enterprise engenderment accelerates initiative platforms, reducing staffing components, integration of technical accessibility, resulting in bottom line pluralisms, benefit-wise. Incidental re-sizing staff requirements through attrition can be accelerated by paridigm shifts and focusing on core suitability and cross-training. </p>
+	</div>
+
+	<div id="contentright">
+		<h1>contentright</h1>
+<pre>#contentright {
+width:175px;
+padding:0px;
+float:left;
+background:#fff;
+	}</pre>
+			<p>
+	This page is part of <a href="home.asp">CSS Layout Techniques</a>, a resource for web developers and designers.
+	</p>
+	<p>
+	Other Layout Techniques:<br/>
+		<a href="7.asp">3 columns, the holy grail</a><br/>
+	<a href="9.asp">2 columns, ALA style</a><br/>
+	<a href="8.asp">4 columns, all fluid</a><br/>
+	<a href="2.asp">3 columns, all fluid </a><br/>
+	<a href="3.asp">static width and centered</a><br/>
+	<a href="1.asp">nested float</a><br/>
+	</p>
+	<p>
+	Does it <a href="http://validator.w3.org/check?uri=http://glish.com/css/3.asp?noSRC=true">validate</a>?
+	</p>
+	</div>
+	<br clear="all" /><!-- without this little <br /> NS6 and IE5PC do not stretch the frame div down to encopass the content DIVs -->
+</div>
+
+</body>
+</html>

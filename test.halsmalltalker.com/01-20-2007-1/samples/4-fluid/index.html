@@ -1,0 +1,127 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head><title>glish.com : CSS layout techniques : 4 columns, all fluid</title>
+
+<style type="text/css">
+	@import "all.css"; /* just some basic formatting, no layout stuff */
+	
+	body {
+		margin:5px 0px 0px 5px;
+		}
+	#leftcontent {
+		position: absolute;
+		left:1%;
+		width:20%;
+		top:50px;
+		background:#fff;
+		}
+
+	#centerleftcontent {
+		position: absolute;
+		left:22%;
+		width:28%;
+		top:50px;
+		background:#fff;
+		}
+
+	#centerrightcontent {
+		position: absolute;
+		left:51%;
+		width:28%;
+		top:50px;
+		background:#fff;
+		}
+
+	#rightcontent {
+		position: absolute;
+		left:80%;
+		width:19%;
+		top:50px;
+		background:#fff;
+		}
+	
+	#rightcontent, #centerrightcontent, #centerleftcontent, #leftcontent {
+		border:1px solid #000;
+		}
+		
+	p,h1,pre {
+		margin:0px 10px 10px 10px;
+		}
+		
+	h1 {
+		font-size:14px;
+		padding-top:10px;
+		}
+	
+	#centerrightcontent p { font-size:10px}
+	
+</style>
+</head><body>
+<div id="banner"><h1><a href="home.asp">LAYOUT TECHNIQUES</a>: 4 columns, all fluid</h1></div>
+<div id="leftcontent">
+	<h1>leftcontent</h1>
+<pre>#leftcontent {
+position: absolute;
+left:1%;
+width:20%;
+top:50px;
+background:#fff;
+	}</pre>
+	<p class="greek">Analysis of funding is inapproriate in this effort as assets are repurposed in statements who existance owe their identity to their obscurity. Obfuscation of responsibility underlines these offerings, whose primary function is to generate revenue and secondarily to shift accountability downstream.</p>
+</div>
+
+<div id="centerleftcontent">
+	<h1>centerleftcontent</h1>
+<pre>#centerleftcontent {
+position: absolute;
+left:22%;
+width:28%;
+top:50px;
+background:#fff;
+	}</pre>
+	<p>This technique can actually be used to provide as many columns on a page as you like. Drawback #1) it gets difficult quickly if you want to make any of the columns a fixed width.  Drawback #2) it relies heavily on percentages, which the various browsers all calculate differently, so you can't place your columns very precisely. Still, a very useful technique, especially if you don't want borders and different background colors for your columns. I first saw it in use at <a class="sitelinksredorange" href="http://www.statikmajik.com">Statik Majik</a>.</p>
+	<p><strong>Scroll down for the source.</strong></p>
+</div>
+
+<div id="centerrightcontent">
+	<h1>centerrightcontent</h1>
+<pre>#centerrightcontent {
+position: absolute;
+left:51%;
+width:28%;
+top:50px;
+background:#fff;
+	}</pre>
+		<p>
+	This page is part of <a href="home.asp">CSS Layout Techniques</a>, a resource for web developers and designers.
+	</p>
+	<p>
+	Other Layout Techniques:<br/>
+		<a href="7.asp">3 columns, the holy grail</a><br/>
+	<a href="9.asp">2 columns, ALA style</a><br/>
+	<a href="8.asp">4 columns, all fluid</a><br/>
+	<a href="2.asp">3 columns, all fluid </a><br/>
+	<a href="3.asp">static width and centered</a><br/>
+	<a href="1.asp">nested float</a><br/>
+	</p>
+	<p>
+	Does it <a href="http://validator.w3.org/check?uri=http://glish.com/css/8.asp?noSRC=true">validate</a>?
+	</p>
+</div>
+
+<div id="rightcontent">
+	<h1>rightcontent</h1>
+<pre>#rightcontent {
+position: absolute;
+left:80%;
+width:19%;
+top:50px;
+background:#fff;
+	}</pre>
+	<p class="greek">Syntactically valid structuring implemetation, enhancement based reporting, technology development, proprietary incedentals administration are all areas of content modularization engaging visibility deficits. </p>
+</div>
+<div style="position:absolute; top:450px">
+
+</div>
+</body>
+</html>
